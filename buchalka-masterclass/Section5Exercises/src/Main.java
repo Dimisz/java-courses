@@ -2,8 +2,10 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-//        PositiveNegativeZero.checkNumber(5);
-//        PositiveNegativeZero.checkNumber(-1);
-//        PositiveNegativeZero.checkNumber(0);
+        SpeedConverter.printConversion(1.5);
+        SpeedConverter.printConversion(10.25);
+        SpeedConverter.printConversion(-5.6);
+        SpeedConverter.printConversion(25.42);
+        SpeedConverter.printConversion(75.114);
     }
 }
