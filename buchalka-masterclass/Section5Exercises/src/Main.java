@@ -2,8 +2,10 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        MinutesToYears.printYearsAndDays(525600);
-        MinutesToYears.printYearsAndDays(1051200);
-        MinutesToYears.printYearsAndDays(561600);
+        EqualityPrinter.printEqual(1, 1, 1);
+        EqualityPrinter.printEqual(1, 1, 2);
+        EqualityPrinter.printEqual(-11, -1, -1);
+        EqualityPrinter.printEqual(1, 2, 3);
+
     }
 }
