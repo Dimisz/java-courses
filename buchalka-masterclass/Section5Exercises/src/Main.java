@@ -2,10 +2,9 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        EqualityPrinter.printEqual(1, 1, 1);
-        EqualityPrinter.printEqual(1, 1, 2);
-        EqualityPrinter.printEqual(-11, -1, -1);
-        EqualityPrinter.printEqual(1, 2, 3);
+        System.out.println(PlayingCat.isCatPlaying(true, 10));
+        System.out.println(PlayingCat.isCatPlaying(false, 36));
+        System.out.println(PlayingCat.isCatPlaying(false, 35));
 
     }
 }
