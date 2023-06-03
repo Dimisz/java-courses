@@ -2,9 +2,8 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        System.out.println(AreaCalculator.area(5.0));
-        System.out.println(AreaCalculator.area(-1));
-        System.out.println(AreaCalculator.area(5.0, 4.0));
-        System.out.println(AreaCalculator.area(-1.0, 4.0));
+        MinutesToYears.printYearsAndDays(525600);
+        MinutesToYears.printYearsAndDays(1051200);
+        MinutesToYears.printYearsAndDays(561600);
     }
 }
