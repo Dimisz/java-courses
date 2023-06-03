@@ -4,5 +4,9 @@ public class Main {
     public static void main(String[] args) {
         SecondsAndMinutes.getDurationString(3945);
         SecondsAndMinutes.getDurationString(65, 45);
+
+        SecondsAndMinutes.getDurationString(-1);
+        SecondsAndMinutes.getDurationString(-65, 45);
+        SecondsAndMinutes.getDurationString(5, -5);
     }
 }
