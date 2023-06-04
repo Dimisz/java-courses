@@ -1,21 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        NumberInWord.printNumberInWord(-10);
-        NumberInWord.printNumberInWord(-2);
-        NumberInWord.printNumberInWord(0);
-        NumberInWord.printNumberInWord(1);
-        NumberInWord.printNumberInWord(2);
-        NumberInWord.printNumberInWord(3);
-        NumberInWord.printNumberInWord(4);
-        NumberInWord.printNumberInWord(5);
-        NumberInWord.printNumberInWord(6);
-        NumberInWord.printNumberInWord(7);
-        NumberInWord.printNumberInWord(8);
-        NumberInWord.printNumberInWord(9);
-        NumberInWord.printNumberInWord(10);
-        NumberInWord.printNumberInWord(11);
-        NumberInWord.printNumberInWord(12);
-        NumberInWord.printNumberInWord(40);
-
+//        System.out.println("-1600: " + LeapYear.isLeapYear(-1600));
+//        System.out.println("1600: " + LeapYear.isLeapYear(1600));
+//        System.out.println("2017: " + LeapYear.isLeapYear(2017));
+//        System.out.println("2000: " + LeapYear.isLeapYear(2000));
+        System.out.println("31: " + LeapYear.getDaysInMonth(1, 2020));
+        System.out.println("29: " + LeapYear.getDaysInMonth(2, 2020));
+        System.out.println("28: " + LeapYear.getDaysInMonth(2, 2021));
+        System.out.println("28: " + LeapYear.getDaysInMonth(2, 2018));
+        System.out.println("-1 " + LeapYear.getDaysInMonth(-1, 2020));
+        System.out.println("-1 " + LeapYear.getDaysInMonth(1, -2020));
     }
 }
