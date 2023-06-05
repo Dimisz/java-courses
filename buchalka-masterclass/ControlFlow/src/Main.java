@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        SharedDigits.hasSharedDigit(12, 23);
-        SharedDigits.hasSharedDigit(9, 99);
-        SharedDigits.hasSharedDigit(13, 12);
-
+        GreatestCommonDivisor.getGreatestCommonDivisor(25, 15);
+        GreatestCommonDivisor.getGreatestCommonDivisor(12, 30);
+        GreatestCommonDivisor.getGreatestCommonDivisor(9, 18);
+        GreatestCommonDivisor.getGreatestCommonDivisor(81, 153);
     }
 }
