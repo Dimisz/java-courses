@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        NumberPalindrome.isPalindrome(-1221);
-        NumberPalindrome.isPalindrome(707);
-        NumberPalindrome.isPalindrome(11212);
+        SharedDigits.hasSharedDigit(12, 23);
+        SharedDigits.hasSharedDigit(9, 99);
+        SharedDigits.hasSharedDigit(13, 12);
+
     }
 }
