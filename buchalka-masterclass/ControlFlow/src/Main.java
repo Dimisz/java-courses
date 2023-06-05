@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        SumDigits.sumDigits(125);
+        NumberPalindrome.isPalindrome(-1221);
+        NumberPalindrome.isPalindrome(707);
+        NumberPalindrome.isPalindrome(11212);
     }
 }
