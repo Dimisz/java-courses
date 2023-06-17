@@ -11,6 +11,18 @@ public class Employee implements Comparable<Employee> {
         this.salary = salary;
     }
 
+    public int getId(){
+        return this.id;
+    }
+
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    public String getLastName(){
+        return this.lastName;
+    }
+
     @Override
     public String toString() {
         return "\nEmployee{" +
