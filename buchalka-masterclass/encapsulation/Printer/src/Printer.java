@@ -34,32 +34,32 @@ public class Printer {
     }
 
     public int addToner(int tonerAmount){
-        if(tonerAmount < 0){
-            System.out.println("Cannot add a negative amount of toner");
+        if(tonerAmount <= 0 || tonerAmount > 100){
+//            System.out.println("Cannot add a negative amount of toner");
             return -1;
         }
-        else if(this.tonerLevel + tonerAmount > 100){
-            int remainingAmount = this.tonerLevel + tonerAmount - 100;
-            this.tonerLevel = 100;
-            System.out.println("That's too much. Toner was filled to 100% and " + remainingAmount + " still left");
-            return 100;
-        }
         else {
-            this.tonerLevel += tonerAmount;
-            System.out.println("Toner topped up to " + this.tonerLevel + "%");
-            return this.tonerLevel;
+            if(this.tonerLevel + tonerAmount > 100){
+                return -1;
+            }
+            else{
+                this.tonerLevel += tonerAmount;
+//                System.out.println("Toner topped up to " + this.tonerLevel + "%");
+                return this.tonerLevel;
+            }
         }
     }
 
     public int printPages(int numPages){
         if(numPages < 0){
-            System.out.println("Cannot unprint the previously printed pages...");
+//            System.out.println("Cannot unprint the previously printed pages...");
             return -1;
         }
         else{
             int sheetsOfPaperUsed = numPages;
-            System.out.println("Printing...");
+//            System.out.println("Printing...");
             if(this.duplex){
+                System.out.println("Printing in duplex mode");
                 sheetsOfPaperUsed = (numPages / 2) + (numPages % 2);
                 this.pagesPrinted += sheetsOfPaperUsed;
             }
