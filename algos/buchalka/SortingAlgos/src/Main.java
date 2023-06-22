@@ -4,7 +4,8 @@ public class Main {
         int[] arr2 = { 20, 35, -15, 7, 55, 1, -22 };
         printArray(arr2);
 //        BubbleSort.sort(arr2);
-        SelectionSort.sort(arr2);
+//        SelectionSort.sort(arr2);
+        MergeSort.sort(arr2);
         printArray(arr2);
     }
 
