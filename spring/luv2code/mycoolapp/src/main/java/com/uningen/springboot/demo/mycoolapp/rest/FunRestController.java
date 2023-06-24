@@ -11,4 +11,9 @@ public class FunRestController {
     public String sayHello(){
         return "Hello world!";
     }
+
+    @GetMapping("/about")
+    public String aboutPage(){
+        return "<h1>This is a home page</h1>";
+    }
 }
