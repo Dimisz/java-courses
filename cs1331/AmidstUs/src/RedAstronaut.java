@@ -16,14 +16,14 @@ public class RedAstronaut extends Player implements Impostor{
     @Override
     protected void emergencyMeeting() {
         if(!this.isFrozen()){
-            Arrays.sort(this.getPlayers());
-            if(!this.getPlayers()[this.getPlayers().length - 1].equals(this)){
-                if(this.getPlayers()[this.getPlayers().length - 1].getSusLevel() != this.getSusLevel()){
-                    this.getPlayers()[this.getPlayers().length - 1].setFrozen(true);
+            Arrays.sort(Player.getPlayers());
+            if(!Player.getPlayers()[Player.getPlayers().length - 1].equals(this)){
+                if(Player.getPlayers()[Player.getPlayers().length - 1].getSusLevel() != this.getSusLevel()){
+                    Player.getPlayers()[Player.getPlayers().length - 1].setFrozen(true);
                 }
             }
         }
-        this.gameOver();
+        super.gameOver();
     }
 
     @Override
@@ -38,7 +38,7 @@ public class RedAstronaut extends Player implements Impostor{
                 }
             }
         }
-        this.gameOver();
+        super.gameOver();
     }
 
     @Override
@@ -79,5 +79,9 @@ public class RedAstronaut extends Player implements Impostor{
 
     public String getSkill(){
         return this.skill;
+    }
+
+    public void setSkill(String skill){
+        this.skill = skill;
     }
 }

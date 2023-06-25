@@ -90,9 +90,12 @@ public abstract class Player implements Comparable<Player> {
      * @return boolean whether or not the game is over
      */
     public boolean gameOver() {
+        System.out.println("Calling gameOver...");
+
         int impostorCount = 0;
         int crewmateCount = 0;
         for (Player p : players) {
+//            System.out.println(p);
             if (p instanceof Impostor && !p.frozen) {
                 impostorCount++;
             } else if (p instanceof Crewmate && !p.frozen) {
