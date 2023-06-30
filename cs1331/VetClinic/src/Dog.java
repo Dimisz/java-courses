@@ -6,6 +6,9 @@ public class Dog extends Pet{
         if(droolRate <= 0){
             this.droolRate = 0.5;
         }
+        else{
+            this.droolRate = droolRate;
+        }
     }
 
     public Dog(String name, double health, int painLevel){
@@ -32,16 +35,18 @@ public class Dog extends Pet{
 
     @Override
     public int treat() {
-        this.heal();
+        int time = 0;
         if(this.getDroolRate() < 3.5){
-            return (int) ((this.getPainLevel() * 2) / this.getHealth());
+            time = (int)Math.ceil((this.getPainLevel() * 2) / this.getHealth());
         }
-        else if(this.getDroolRate() >= 3.5 || this.getDroolRate() <= 7.5){
-            return (int) (this.getPainLevel() / this.getHealth());
+        else if(this.getDroolRate() >= 3.5 && this.getDroolRate() <= 7.5){
+            time = (int)Math.ceil(this.getPainLevel() / this.getHealth());
         }
         else {
-            return (int) (this.getPainLevel()/ (this.getHealth() * 2));
+            time = (int)Math.ceil(this.getPainLevel()/ (this.getHealth() * 2));
         }
+        super.heal();
+        return time;
     }
 
     @Override
