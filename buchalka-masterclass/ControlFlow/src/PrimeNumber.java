@@ -26,12 +26,12 @@ public class PrimeNumber {
         }
         else {
             int primesCount = 0;
-            for(int i = lowerBound; i < upperBound; i++){
+            for(int i = lowerBound; primesCount < 3 && i < upperBound; i++){
                 if(isPrime(i)){
                     primesCount++;
                     System.out.println(i);
                 }
-                if(primesCount == 3) break;
+//                if(primesCount == 3) break;
             }
         }
     }
