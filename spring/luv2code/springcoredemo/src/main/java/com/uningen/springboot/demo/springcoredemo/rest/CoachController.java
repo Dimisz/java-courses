@@ -10,16 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class CoachController {
     // private field for the dependency
     private Coach myCoach;
-    private Coach anotherCoach;
+//    private Coach anotherCoach;
     // constructor for DI
     // recommended way, commented out to showcase SETTER INJECTION
     @Autowired
     public CoachController(
-            @Qualifier("soccerCoach") Coach coach,
-            @Qualifier("soccerCoach") Coach secondCoach){
+            @Qualifier("cricketCoach") Coach coach
+//            @Qualifier("soccerCoach") Coach secondCoach
+    ){
         System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = coach;
-        anotherCoach = secondCoach;
+//        anotherCoach = secondCoach;
     }
 //    @Autowired
 //    public void setCoach(Coach theCoach){
@@ -30,13 +31,13 @@ public class CoachController {
         return myCoach.getDailyWorkout();
     }
 
-    @GetMapping("/alternative-workout")
-    public String getAlternativeWorkout(){
-        return anotherCoach.getDailyWorkout();
-    }
-
-    @GetMapping("/check")
-    public String check(){
-        return "Comparing myCoach == anotherCoach, " + (myCoach == anotherCoach);
-    }
+//    @GetMapping("/alternative-workout")
+//    public String getAlternativeWorkout(){
+//        return anotherCoach.getDailyWorkout();
+//    }
+//
+//    @GetMapping("/check")
+//    public String check(){
+//        return "Comparing myCoach == anotherCoach, " + (myCoach == anotherCoach);
+//    }
 }
