@@ -14,7 +14,7 @@ public class CoachController {
     // constructor for DI
     // recommended way, commented out to showcase SETTER INJECTION
     @Autowired
-    public CoachController(@Qualifier("cricketCoach") Coach coach){
+    public CoachController(@Qualifier("aquatic") Coach coach){
         System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = coach;
     }
