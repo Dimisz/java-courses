@@ -1,16 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        TraditionalSwitchChallenge.getNatoChar('a');
-        TraditionalSwitchChallenge.getNatoChar('A');
-        TraditionalSwitchChallenge.getNatoChar('b');
-        TraditionalSwitchChallenge.getNatoChar('B');
-        TraditionalSwitchChallenge.getNatoChar('c');
-        TraditionalSwitchChallenge.getNatoChar('C');
-        TraditionalSwitchChallenge.getNatoChar('d');
-        TraditionalSwitchChallenge.getNatoChar('D');
-        TraditionalSwitchChallenge.getNatoChar('e');
-        TraditionalSwitchChallenge.getNatoChar('E');
-        TraditionalSwitchChallenge.getNatoChar('h');
+        NumberInWord.printNumberInWord(0);
+        NumberInWord.printNumberInWord(1);
+        NumberInWord.printNumberInWord(2);
+        NumberInWord.printNumberInWord(3);
+        NumberInWord.printNumberInWord(4);
+        NumberInWord.printNumberInWord(5);
+        NumberInWord.printNumberInWord(6);
+        NumberInWord.printNumberInWord(7);
+        NumberInWord.printNumberInWord(8);
+        NumberInWord.printNumberInWord(9);
+        NumberInWord.printNumberInWord(10);
+        NumberInWord.printNumberInWord(-1);
+
 
     }
 }
