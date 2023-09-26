@@ -1,8 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(PerfectNumber.isPerfectNumber(6));
-        System.out.println(PerfectNumber.isPerfectNumber(28));
-        System.out.println(PerfectNumber.isPerfectNumber(5));
-        System.out.println(PerfectNumber.isPerfectNumber(-1));
+        NumberToWords.numberToWords(123);
+        System.out.println("********");
+        NumberToWords.numberToWords(1010);
+        System.out.println("********");
+        NumberToWords.numberToWords(1000);
+        System.out.println("********");
+        NumberToWords.numberToWords(-12);
+
     }
 }
