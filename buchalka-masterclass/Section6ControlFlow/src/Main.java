@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        FactorPrinter.printFactors(6);
-        FactorPrinter.printFactors(32);
-        FactorPrinter.printFactors(10);
-        FactorPrinter.printFactors(-1);
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(25, 15));
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(12, 30));
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(9, 18));
+        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(81, 153));
     }
 }
