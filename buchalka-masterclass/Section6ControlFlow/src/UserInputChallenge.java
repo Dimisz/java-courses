@@ -14,12 +14,11 @@ public class UserInputChallenge {
                 count++;
                 sum += userNumber;
             }
-            catch(Exception ex){
+            catch(NumberFormatException nfe){
                 System.out.println(userInput + " is not a valid number");
             }
-            finally {
-                System.out.println("The sum of integers you've entered is " + sum);
-            }
         }
+        System.out.println("The sum of integers you've entered is " + sum);
+
     }
 }
