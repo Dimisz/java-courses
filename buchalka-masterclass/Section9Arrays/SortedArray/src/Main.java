@@ -1,12 +1,10 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
-        int[] a = Sorting.generateRandomArray(5);
-        System.out.println(Arrays.toString(a));
-        int[] aSorted = Sorting.sortIntArray(a);
-        System.out.println(Arrays.toString(aSorted));
-        int[] aReversed = Sorting.reverseArray(aSorted);
-        System.out.println(Arrays.toString(aReversed));
+
+        int[] a = Sorting.getIntegers(5);
+        Sorting.printArray(a);
+        System.out.println("After sorting...");
+        int[] aSorted = Sorting.sortIntegers(a);
+        Sorting.printArray(aSorted);
     }
 }

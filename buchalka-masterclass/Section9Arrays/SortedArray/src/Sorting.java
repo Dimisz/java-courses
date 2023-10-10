@@ -1,27 +1,47 @@
 import java.util.Arrays;
-import java.util.Random;
+import java.util.Scanner;
 
 public class Sorting {
-    public static int[] generateRandomArray(int len){
-        Random random = new Random();
-        int[] arr = new int[len];
-        for(int i = 0; i < len; i++){
-            arr[i] = random.nextInt(0, 100);
+    public static int[] getIntegers(int len){
+        int[] enteredNumbers = new int[len];
+        Scanner scanner = new Scanner(System.in);
+        int numbersEntered = 0;
+        while(numbersEntered <= len - 1){
+            try{
+                enteredNumbers[numbersEntered] = Integer.parseInt(scanner.nextLine());
+                numbersEntered++;
+            }
+            catch(Exception ex){
+                System.out.println("Enter an integer");
+            }
+
         }
-        return arr;
+        return enteredNumbers;
     }
 
-    public static int[] sortIntArray(int[] arr){
-        int[] arrayToSort = Arrays.copyOf(arr, arr.length);
-        Arrays.sort(arrayToSort);
-        return arrayToSort;
-    }
-
-    public static int[] reverseArray(int[] arr){
-        int[] reversedArray = new int[arr.length];
+    public static void printArray(int[] arr){
         for(int i = 0; i < arr.length; i++){
-            reversedArray[i] = arr[arr.length - i - 1];
+            System.out.println("Element " + i + " contents " + arr[i]);
         }
-        return reversedArray;
+    }
+
+    public static int[] sortIntegers(int[] arr){
+        int[] sortedArray = Arrays.copyOf(arr, arr.length);
+        boolean flag = true;
+        while(flag){
+            int swapsCount = 0;
+            for(int i = 0; i < sortedArray.length - 1; i++){
+                if(sortedArray[i] < sortedArray[i+1]){
+                    swapsCount++;
+                    int temp = sortedArray[i];
+                    sortedArray[i] = sortedArray[i+1];
+                    sortedArray[i+1] = temp;
+                }
+            }
+            if(swapsCount == 0){
+                flag = false;
+            }
+        }
+        return sortedArray;
     }
 }
