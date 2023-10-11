@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Top 5 movies</title>
-  <style>
-    table, th, td {
-      border: 1px solid black;
-    }
-    th, td {
-      padding: 0.5rem;
-    }
-  </style>
+  <link th:href="@{ /styles.css }" rel="stylesheet">
 </head>
 <body>
+  <p th:text="${fullName}" style="font-weight: bold;"></p>
+  <ul>
+    <li th:text="${#strings.substring(fullName, 0, 1)}"></li>
+    <li th:text="${#strings.substring(fullName, 0, 2)}"></li>
+    <li th:text="${#strings.substring(fullName, 0, fullName.length())}"></li>
+  </ul>
+  
   <h1>IMDB: Top 5 Episodes</h1>
   <table>
     <thead>

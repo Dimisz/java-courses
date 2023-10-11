@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/styles.css}">
+  <title>Sales</title>
+</head>
+<body>
+  <h1>Sales Record</h1>
+  <table>
+    <thead>
+      <th>Item</th>
+      <th>Revenue</th>
+      <th>Cost</th>
+      <th>Profit</th>
+    </thead>
+    <tbody>
+      <tr 
+        th:each="sale: ${sales}" 
+        th:class="*{sale.profit < 0 ? 'orange' : ''}" 
+        th:classappend="*{sale.profit > 0 ? 'green' : ''}"
+      >
+        <td th:text="*{sale.itemName}"></td>
+        <td th:text="*{sale.revenue}"></td>
+        <td th:text="*{sale.cost}"></td>
+        <td th:text="*{sale.profit}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
